@@ -1,0 +1,304 @@
+/* تصفير الهوامش والتعبئة الافتراضية
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* منع التمرير الأفقي */
+}
+
+/* جعل الهيدر يملأ العرض بالكامل */
+.tp-header {
+    width: 100vw;
+    padding: 15px 0;
+}
+
+/* ضبط الحاوية بدون أي فراغات جانبية */
+.container-fluid {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    /* مسافة داخلية صغيرة */
+}
+
+/* اللوجو */
+.tp-header__logo img {
+    max-height: 50px;
+}
+
+/* القائمة */
+.tp-header__main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tp-header__main-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.tp-header__main-menu ul li a:hover {
+    color: #007bff;
+}
+
+/* زر لوحة التحكم */
+.tp-btn-blue {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.tp-btn-blue:hover {
+    background-color: #0056b3;
+}
+
+/* زر القائمة للأجهزة الصغيرة */
+.tp-menu-bar {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* إظهار زر القائمة فقط على الشاشات الصغيرة */
+@media (max-width: 992px) {
+    .tp-menu-bar {
+        display: block;
+    }
+
+    .tp-header__main-menu {
+        display: none;
+        /* إخفاء القائمة على الأجهزة الصغيرة */
+    }
+}
+
+.tp-header__area {
+    background: transparent;
+    padding: 20px 0;
+    position: relative;
+}
+
+.tp-header__logo img {
+    max-height: 50px;
+}
+
+.tp-header__main-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.tp-header__main-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.tp-header__right-two a.tp-btn-blue {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.tp-header__right-two a.tp-btn-blue:hover {
+    background-color: #0056b3;
+}
+
+.tp-header__bars i {
+    font-size: 24px;
+    color: #000;
+}
+
+/* Responsive helpers (replace with media queries or Bootstrap classes if needed) */
+.d-none {
+    display: none !important;
+}
+
+.d-lg-block {
+    display: block !important;
+}
+
+.d-md-block {
+    display: block !important;
+}
+
+.d-lg-none {
+    display: none !important;
+}
+
+@media (max-width: 991px) {
+    .d-lg-block {
+        display: none !important;
+    }
+
+    .d-lg-none {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .d-md-block {
+        display: none !important;
+    }
+}
+
+*/ .tp-header__area {
+    background: transparent;
+    padding: 20px 0;
+    position: relative;
+}
+
+.tp-header__logo img {
+    max-height: 50px;
+}
+
+.tp-header__main-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.tp-header__main-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.tp-header__right-two a.tp-btn-blue {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.tp-header__right-two a.tp-btn-blue:hover {
+    background-color: #0056b3;
+}
+
+.tp-header__bars i {
+    font-size: 24px;
+    color: #000;
+}
+
+/* Responsive helpers (replace with media queries or Bootstrap classes if needed) */
+.d-none {
+    display: none !important;
+}
+
+.d-lg-block {
+    display: block !important;
+}
+
+.d-md-block {
+    display: block !important;
+}
+
+.d-lg-none {
+    display: none !important;
+}
+
+@media (max-width: 991px) {
+    .d-lg-block {
+        display: none !important;
+    }
+
+    .d-lg-none {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .d-md-block {
+        display: none !important;
+    }
+}
+
+
+/* قائمة جانبية للموبايل */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    transition: right 0.3s ease;
+    z-index: 2000;
+}
+
+.mobile-sidebar.open {
+    right: 0;
+}
+
+.mobile-sidebar .close-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+}
+
+.mobile-sidebar ul {
+    list-style: none;
+    padding: 60px 0 0;
+}
+
+.mobile-sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.mobile-sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* خلفية داكنة عند فتح السايد بار */
+.mobile-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
