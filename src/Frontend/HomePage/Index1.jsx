@@ -2,10 +2,15 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Hero2 from '../sections/Hero2/Hero2';
 // import Features from '../sections/Features/Features';
-import Pricing from './Pricing';
+// import Pricing from './Pricing';
 import Index1testimonial from './Index1testimonial';
 import "./Index1.css"
 import Header from '../../components/Header/Header'
+import Platform from '../sections/Platform/platform';
+import CTA from '../sections/CTA/CTA';
+import PricingPage from '../sections/Plans/PricingPage ';
+import AccountArea from '../sections/account-area/account-area';
+
 // import {stripHtmlTags} from "../../utils/function";
 
 const Index1 = () => {
@@ -38,144 +43,16 @@ const Index1 = () => {
         {/* Hero Section */}
         <Hero2 />
         {/* CTA Area */}
-        <div className="tp-cta__area">
-          <div className="container p-relative">
-            {/* <div className="tp-cta__thumb">
-            <img src={homeData.cta_thumbnail} alt="" />
-          </div>
-          <div className="tp-cta__thumb-2 d-none d-lg-block">
-            <img src={homeData.cta_logo} alt="" />
-          </div> */}
-            <div className="tp-cta__bg grey-bg">
-              <div className="row">
-                <div className="col-xl-7 col-lg-8 col-md-12">
-                  <div className="tp-cta__item-left">
-                    <h3 className="tp-cta__title">حوّل السلات المتروكة إلى مبيعات 🚀</h3>
-                    {/* <h3 className="tp-cta__title">{homeData.cta?.title}</h3> */}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <CTA />
       </div>
       {/* Platform Area */}
-      <div className="tp-platform__area pb-120 pt-160">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-xl-6 col-lg-6">
-              <div className="tp-platform__wrapper p-relative">
-                <div className="tp-platform__shape-1">
-                  <img src="/frontend/platform/pf-3.png" alt="" />
-                </div>
-                <div className="tp-platform__shape-2">
-                  <img src="/frontend/platform/pf-4.png" alt="" />
-                </div>
-                <div
-                  className="tp-platform__thumb z-index wow tpfadeLeft"
-                  data-wow-duration=".9s"
-                  data-wow-delay=".5s"
-                  style={{
-                    visibility: 'visible',
-                    animationDuration: '0.9s',
-                    animationDelay: '0.5s',
-                    animationName: 'tpfadeLeft',
-                  }}
-                >
-                  <img
-                    src="/frontend/platform/1729805305lC9lk3bRfoHcOhbQxLak.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-6 col-lg-6 wow tpfadeRight"
-              data-wow-duration=".9s"
-              data-wow-delay=".8s"
-              style={{
-                visibility: 'visible',
-                animationDuration: '0.9s',
-                animationDelay: '0.8s',
-                animationName: 'tpfadeRight',
-              }}
-            >
-              <div className="tp-platform__content pl-40">
-                <h3 className="tp-section-title-sm pb-25">خدمة إشعارات الواتساب</h3>
-                <p className="pb-25">
-                  يمكنك الان إرسال إشعارات الطلبات والسلات المتروكة عبر واتساب من خلال مرسل بكل سهولة وبشكل فوري خلال لحظات
-                </p>
-                <a className="tp-btn-blue" href="https://murseell.com/pricing">
-                  <span>ابدأ الآن</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Features Area */}
-      {homeData.features_area === 'active' && (
-        <div className="tp-feature__area pt-120 pb-120">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div className="tp-feature__section text-center mb-70">
-                  <h3 className="tp-section-title">{homeData.features?.title}</h3>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              {/* <Features/> */}
-              {/* Include your features section component here */}
-            </div>
-          </div>
-        </div>
-      )}
-
-
+      <Platform />
       {/* Pricing Area */}
       {/* Include your pricing section component here */}
-      <Pricing />
-
+      <PricingPage/>
       {/* Account Area */}
-      <div className="tp-account__area pt-120">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-xl-6 col-lg-6">
-              <div className="tp-account__wrapper">
-                <div className="tp-account__section-box">
-                  <h3 className="tp-section-title-sm pb-20">{homeData.account_area?.heading}</h3>
-                  <span>{homeData.account_area?.subheading}</span>
-                  <p>{homeData.account_area?.description}</p>
-                </div>
-                <div className="tp-account__form p-relative">
-                  <form action={homeData.account_area?.form_link}>
-                    <div className="tp-account__input">
-                      <input type="email" placeholder="example@email.com" name="email" />
-                    </div>
-                    <button>{'sign up'}<i className="fas fa-paper-plane"></i></button>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-6">
-              <div className="tp-account__thumb-wrapper p-relative">
-                <div className="tp-account__thumb text-center">
-                  <img src={homeData.account_area_thumbnail} alt="" />
-                </div>
-                <div className="tp-account__sm-img-1 d-none d-md-block">
-                  <img src={homeData.account_area_top_thumbnail} alt="" />
-                </div>
-                <div className="tp-account__sm-img-2 d-none d-md-block">
-                  <img src={homeData.account_area_bottom_thumbnail} alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <AccountArea/>
+     
       {/* Testimonial Area */}
       {/* Include your testimonial section component here */}
       <Index1testimonial />

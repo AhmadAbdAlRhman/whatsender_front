@@ -1,0 +1,134 @@
+/* الحاوية العامة */
+.tp-price__area {
+    padding-top: 120px;
+    padding-bottom: 90px;
+    background-color: #f9f9f9;
+    direction: rtl;
+    font-family: 'Arial', sans-serif;
+}
+
+.plan .tp-price__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 35px 45px;
+}
+    .tp-price__section h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #222;
+    }
+
+    .tp-price__section span {
+        color: #666;
+        font-size: 14px;
+    }
+
+    /* الأعمدة */
+    .plan {
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    /* البطاقة */
+    .tp-price__item {
+        background-color: #fff;
+        border-radius: 24px;
+        padding: 35px 25px;
+        border: 1px solid #017EFA;
+        transition: 0.3s;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* البطاقة المميزة */
+    .tp-price__item.highlighted {
+        background-color: #017EFA;
+        color: white;
+    }
+
+    .tp-price__item.highlighted .tp-price__title,
+    .tp-price__item.highlighted li,
+    .tp-price__item.highlighted .tp-price__icon span {
+        color: white;
+    }
+
+    .tp-price__item.highlighted .tp-price__btn a {
+        background-color: #fff;
+        color: #017EFA;
+    }
+
+    .tp-price__item.highlighted .tp-price__btn a:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    /* عنوان الباقة */
+    .tp-price__icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+
+    .tp-price__icon .badge {
+        background-color: white;
+        color: #017EFA;
+        padding: 5px 10px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    /* السعر */
+    .tp-price__title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #1f1f1f;
+        margin-bottom: 20px;
+    }
+
+    /* قائمة المميزات */
+    .tp-price__list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+
+    .tp-price__list li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        color: #444;
+        font-size: 15px;
+    }
+
+    .tp-price__list li img {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+    }
+
+    /* زر الاشتراك */
+    .tp-price__btn a {
+        background-color: #017EFA;
+        color: white;
+        border: none;
+        padding: 14px 32px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 999px; /* يعطي الشكل الدائري الكامل */
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .tp-price__btn a:hover {
+        background-color: #000;
+        color: #fff;
+    }

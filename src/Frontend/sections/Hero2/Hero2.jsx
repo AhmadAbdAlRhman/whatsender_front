@@ -8,7 +8,6 @@ const HeroSection = () => {
     const fetchData = async ()=>{
       await axios.get('http://localhost:3010/index')  // هنا نقوم بجلب البيانات من API (تأكد من المسار)
         .then((response) => {
-          console.log(response.data)  // تعيين البيانات التي تم جلبها
           setData(response.data);
           // Removed console.log(Data) as it would show stale data
         })
@@ -32,7 +31,6 @@ const HeroSection = () => {
               <div className="tp-hero__wrapper text-center">
                 <div className="tp-hero__content text-center">
                   <h2 className="tp-hero__title-lg pb-40 theme-color wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                    {console.log(Data)}
                     {Data.heading ? Data.heading : 'Default Heading'}  {/* التأكد من وجود البيانات قبل استخدامها */}
                   </h2>
                 </div>
