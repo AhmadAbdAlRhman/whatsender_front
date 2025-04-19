@@ -1,6 +1,6 @@
 import Header from "../components/Header/Header";
 import PricingPlan from "../components/PricingPlan/PricingPlan";
-import PRicing from "../components/PRicing/Pricing";
+import PRicing from "../Frontend/sections/Plans/PricingPage ";
 import ChooseSection from "../components/ChooseSection/ChooseSection";
 import Footer from "../components/footer/Footer"
 const Pricing = () => {

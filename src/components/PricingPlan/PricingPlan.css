@@ -1,7 +1,7 @@
 .breadcrumb__area {
   position: relative;
   background-color: #eaf4ff;
-  background-image: url("https://murseell.com/assets/frontend/img/breadcrumb/breadcrumb.jpg");
+  background-image: url("/frontend/breadcrumb/breadcrumb.jpg");
   background-size: cover;
   background-position: center;
   padding: 80px 0;

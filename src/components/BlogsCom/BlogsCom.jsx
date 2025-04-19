@@ -18,7 +18,7 @@ const BlogIndex = () => {
   }, []);
 
   return (
-    <div className="container pt-120 pb-120 " style={{ padding: "10% 2%" }}>
+    <div className="container10 pt-120 pb-120 " style={{ padding: "10% 2%" }}>
       <div className="row">
         <div className="col-xxl-8 col-xl-8 col-lg-8">
           <div id="blog" className="postbox__wrapper pr-20">
