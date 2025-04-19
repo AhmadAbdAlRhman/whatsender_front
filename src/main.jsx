@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  <StrictMode class="full-width pt-120 pb-120" style="padding: 10% 2%;">
     <EditAboutPage />
    
   </StrictMode>,

@@ -29,21 +29,33 @@ const Header = ({isAuthenticated}) => {
           <div className="col-xl-7 col-lg-7 d-none d-lg-block">
             <div className="tp-header__main-menu tp-header__black-menu">
               <nav id="mobile-menu">
-                <ul>
-                  <li><a href="https://murseell.com">الرئيسية</a></li>
-                  <li><a href="https://murseell.com/pricing">التسعير</a></li>
-                  <li><a href="https://murseell.com/about">من نحن</a></li>
-                  <li><a href="https://murseell.com/features">الميزات</a></li>
-                  <li><a href="https://murseell.com/blogs">المدونات</a></li>
-                  <li><a href="https://murseell.com/contact">اتصل بنا</a></li>
-                </ul>
+              <ul>
+                <li>
+                  <Link to="/">الرئيسية</Link>
+                </li>
+                <li>
+                  <Link to="/pricing">التسعير</Link>
+                </li>
+                <li>
+                  <Link to="/aboutus">من نحن</Link>
+                </li>
+                <li>
+                  <Link to="/features">الميزات</Link>
+                </li>
+                <li>
+                  <Link to="/blogs">المدونات</Link>
+                </li>
+                <li>
+                  <Link to="/contactus">اتصل بنا</Link>
+                </li>
+              </ul>
               </nav>
             </div>
           </div>
 
           <div className="col-xl-3 col-lg-3 col-md-6 col-6">
             <div className="tp-header__right-two d-flex align-items-center justify-content-end">
-              <a className="tp-btn-blue d-none d-lg-block" href="https://murseell.com/login">
+              <a className="tp-btn-blue d-none d-lg-block" href="/login">
                 <span>تسجيل الدخول</span>
               </a>
               <a className="tp-btn-blue d-none d-md-block" href="https://murseell.com/pricing">

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import {  useState } from 'react';
 import "./Footer.css";
   const Footer = () => {
+    const [Lang, setLang] = useState("option1");
     return (
       <footer className="footer">
         <div className="footer-container">
@@ -66,8 +68,8 @@ import "./Footer.css";
                   </div>
                   <div className="col-xl-3 col-lg-3 col-md-6 col-12 order-2 order-lg-3 text-center text-md-end">
                     <div className="tp-footer-bottom__social">
-                      <select className="w-100 text-center language-switch">
-                        <option value="ar" selected>
+                      <select className="w-100 text-center language-switch" value={Lang} onChange={(e) => setLang(e.target.value)}>
+                        <option value="ar"  >
                           ar
                         </option>
                       </select>
